@@ -1,0 +1,82 @@
+let productArray = [
+    {
+        id: 0,
+        image: "images/productImages/Kingspan1",
+        name: "Kingspan Acousticdec - 25mm Chipboard 600mm x 600mm Panel", 
+        price: 6.64
+    },
+    {
+        id: 1,
+        image: "images/productImages/Kingspan1",
+        name: "Kingspan DLOCK - BSEN Heavy Duty 38mm 600mm x 600mm Panel", 
+        price: 15.55
+    },
+    {
+        id: 2,
+        image: "images/productImages/Kingspan1",
+        name: "Kingspan DLOCK - BSEN Heavy Duty 30mm 600mm x 600mm Panel", 
+        price: 11.30
+    },
+    {
+        id: 3,
+        image: "images/productImages/Kingspan1",
+        name: "Kingspan DRF600 - PSA 32mm 600mm x 600mm Panel", 
+        price: 32.45
+    },
+    {
+        id: 4,
+        image: "images/productImages/Kingspan2",
+        name: "Kingspan DFR600 Simploc - PSA 32mm 600mm x 600mm Screwdown Panel", 
+        price: 22.05
+    },
+    {
+        id: 5,
+        image: "images/productImages/Kingspan2",
+        name: "Kingspan FDEB1 - BSEN 31mm 600mm x 600mm With Polyflor SD", 
+        price: 22.60
+    },
+    {
+        id: 6,
+        image: "images/productImages/Kingspan2",
+        name: "Kingspan FDEB4 - BSEN 31mm 600mm x 600mm Panel", 
+        price: 22.60
+    },
+    {
+        id: 7,
+        image: "images/productImages/Kingspan2",
+        name: "Kingspan FDBE6 - BSEN 40mm 600mm x 600mm Panel", 
+        price: 21.37
+    },
+    {
+        id: 8,
+        image: "images/productImages/Kingspan2",
+        name: "Kingspan RG3 Simploc - BSEN 31mm 600mm x 600mm Panel", 
+        price: 24.46
+    },
+    {
+        id: 9,
+        image: "images/productImages/Kingspan3",
+        name: "Kingspan RG5 Simploc - BSEN 31mm 600mm x 600mm Panel", 
+        price: 29.34
+    },
+    {
+        id: 10,
+        image: "images/productImages/Kingspan3",
+        name: "Kingspan RLG600 - PSA 31mm 600mm x 600mm", 
+        price: 15.57
+    },
+    {
+        id: 11,
+        image: "images/productImages/Kingspan3",
+        name: "Kingspan Simploc RMG600 - PSA 31mm 600mm x 600mm Screw Down Panel", 
+        price: 16.70
+    },
+    {
+        id: 12,
+        image: "images/productImages/Kingspan3",
+        name: "Kingspan Torlock TL3 - BSEN 26mm x 600mm x 600mm Panel", 
+        price: 22.06
+    },
+]
+
+export default productArray
