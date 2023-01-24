@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import Header from "./Header"
+import Footer from "./Footer"
+import "../styles/Home.css"
 
 const Home = () => {
     
@@ -19,6 +21,8 @@ const Home = () => {
             <div className="homeImageContainer">
                 <img alt="Terrazzo Flooring" src="images/AFDHome.jpg"></img>
             </div>
+
+            <Footer />
         </div>
     )
 }
