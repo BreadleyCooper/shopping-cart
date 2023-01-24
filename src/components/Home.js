@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Header from "./Header"
 
 const Home = () => {
     
     return (
         <div className="homeContainer">
+            <Header />
 
             <div className="tagline">Elevate your space with AFD Access Flooring.</div>
 
