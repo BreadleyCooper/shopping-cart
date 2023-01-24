@@ -2,7 +2,7 @@ import React from "react"
 
 const ProductCard = (props) => {
 
-    const {image, name, id} = props
+    const {image, name, id, price} = props
 
     return (
         <div className="productCardContainer">
@@ -12,6 +12,9 @@ const ProductCard = (props) => {
                 className="productCard"
                 id = {id}
             ></img>
+            <p>{name}</p>
+            <p>£{price}</p>
+            <button id="addToCartBtn">Add To Cart</button>
         </div>
     )
 }
