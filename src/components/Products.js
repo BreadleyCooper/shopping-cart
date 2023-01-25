@@ -3,26 +3,31 @@ import productArray from "../productArray"
 import ProductCard from "./ProductCard"
 import Header from "./Header"
 import Footer from "./Footer"
+import "../styles/Products.css"
+import "../styles/ProductCard.css"
 
 const Products = () => {
 
 
     return (
-        <div className="productContainer">
+        <div className="productsComponent">
             <Header />
-            {productArray.map((product) => {
-                console.log(product)
-                return(
-                    <ProductCard   
-                        name={product.name}
-                        image={product.image}
-                        key={product.id}
-                        id = {product.id}
-                        price ={product.price}
-                        />)
+            <div className="productContainer">
                 
-            })}
-        <Footer />
+                {productArray.map((product) => {
+                    console.log(product)
+                    return(
+                        <ProductCard   
+                            name={product.name}
+                            image={product.image}
+                            key={product.id}
+                            id = {product.id}
+                            price ={product.price}
+                            />)
+                    
+                })}
+            <Footer />
+            </div>
         </div>
         
     )

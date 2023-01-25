@@ -1,4 +1,6 @@
 import React from "react"
+import "../styles/ProductCard.css"
+
 
 const ProductCard = (props) => {
 
@@ -9,12 +11,14 @@ const ProductCard = (props) => {
             <img   
                 src ={image}
                 alt ={name}
-                className="productCard"
+                className="productCardImg"
                 id = {id}
             ></img>
             <p>{name}</p>
-            <p>£{price}</p>
-            <button id="addToCartBtn">Add To Cart</button>
+            <div className="priceAndBtnContainer">
+                <p>£{price}</p>
+                <button id="addToCartBtn">Add To Cart</button>
+            </div>
         </div>
     )
 }

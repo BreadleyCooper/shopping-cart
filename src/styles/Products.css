@@ -1,0 +1,38 @@
+.productContainer {
+    display: grid;
+    justify-items: center;
+    gap: 1rem
+
+}
+
+.productCardContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    border: 1px black solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.productCardContainer p {
+    padding: 0 1rem 0
+}
+
+.productCardImg {
+    max-width: 80%;
+}
+
+.priceAndBtnContainer {
+    display:flex;
+    align-items: center;
+}
+
+.priceAndBtnContainer p{
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+#addToCartBtn {
+
+    width: fit-content;
+}
