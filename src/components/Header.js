@@ -2,8 +2,15 @@ import React from "react"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from "react-router-dom"
 import "../styles/Header.css"
+import { useState } from "react";
 
 const Header = () => {
+
+    const [cartCount, setCartCount] = useState(0)
+
+    const incrementCartCount =()=> {
+        setCartCount(cartCount + 1)
+    }
     
     return (
         <div className="headerContainer">
@@ -19,6 +26,7 @@ const Header = () => {
                 </Link>
                 <div className="cartBtnContainer">
                     <ShoppingCartIcon id="cartIcon"/>
+                    <p>{cartCount}</p>
                 </div>
             </nav>
         </div>
