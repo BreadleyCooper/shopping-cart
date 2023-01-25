@@ -14,7 +14,7 @@ const ProductCard = (props) => {
                 className="productCardImg"
                 id = {id}
             ></img>
-            <p>{name}</p>
+            <p id="productName">{name}</p>
             <div className="priceAndBtnContainer">
                 <p>£{price}</p>
                 <button id="addToCartBtn">Add To Cart</button>

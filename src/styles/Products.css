@@ -11,6 +11,7 @@
     flex-direction: column;
     max-width: 80%;
     border: 1px black solid;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -26,11 +27,12 @@
 .priceAndBtnContainer {
     display:flex;
     align-items: center;
+    padding-bottom: 0.5rem;
+    
 }
 
 .priceAndBtnContainer p{
-    margin-left: 1rem;
-    margin-right: 2rem;
+    flex-basis: 0;
 }
 
 #addToCartBtn {
