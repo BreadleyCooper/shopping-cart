@@ -6,8 +6,13 @@ import Footer from "./Footer"
 import "../styles/Products.css"
 import "../styles/ProductCard.css"
 
-const Products = () => {
+const Products = (props) => {
 
+    // const handleCartClick = (event) => {
+    //     console.log("HandleCartClick")
+    //     setCartCount(cartCount + 1)
+    //     console.log(cartCount)
+    // }
 
     return (
         <div className="productsComponent">
@@ -15,7 +20,6 @@ const Products = () => {
             <div className="productContainer">
                 
                 {productArray.map((product) => {
-                    console.log(product)
                     return(
                         <ProductCard   
                             name={product.name}

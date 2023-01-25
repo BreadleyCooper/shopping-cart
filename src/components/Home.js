@@ -4,8 +4,8 @@ import Header from "./Header"
 import Footer from "./Footer"
 import "../styles/Home.css"
 
-const Home = () => {
-    
+const Home = (props) => {
+
     return (
         <div className="homeContainer">
             <Header />
