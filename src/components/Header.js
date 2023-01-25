@@ -10,7 +10,7 @@ const Header = () => {
             <div className="logoContainer">
                 <img src="images/afd-logo.png" alt="AFD Logo"></img>
             </div>
-            <nav>
+            <nav className="headerNav">
                 <Link className="navLink" to="/home">
                     <div>Home</div>
                 </Link>
@@ -18,7 +18,7 @@ const Header = () => {
                     <div>Products</div>
                 </Link>
                 <div className="cartBtnContainer">
-                    <ShoppingCartIcon />
+                    <ShoppingCartIcon id="cartIcon"/>
                 </div>
             </nav>
         </div>

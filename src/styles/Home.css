@@ -5,8 +5,41 @@
 
 .homeImageContainer {
     max-width: 100%;
+    position: relative;
+    text-align: center;
 }
 
 .homeImage {
     max-width: 100%;
+    opacity: 0.3;
+}
+
+.tagline {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 80%;
+
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.shopNow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    text-decoration: none;
+
+}
+
+.shopNowBtn {
+    width: fit-content;
+    padding: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250,212,160);
+    font-size: 2rem;
 }

@@ -10,17 +10,14 @@ const Home = () => {
         <div className="homeContainer">
             <Header />
 
-            <div className="tagline">Elevate your space with AFD Access Flooring.</div>
+                <div className="homeImageContainer">
+                    <img className="homeImage" alt="Terrazzo Flooring" src="images/AFDHome.jpg"></img>
+                    <div className="tagline">Elevate your space</div>
+                </div>
 
-            <Link to="/products">
-            <div className="shopNowContainer">
-                <button className="shopNowBtn">Shop Now</button>
-            </div>
-            </Link>
-
-            <div className="homeImageContainer">
-                <img className="homeImage" alt="Terrazzo Flooring" src="images/AFDHome.jpg"></img>
-            </div>
+                <Link className="shopNow" to="/products">
+                    <button className="shopNowBtn">Shop Now</button>
+                </Link>
 
             <Footer />
         </div>
