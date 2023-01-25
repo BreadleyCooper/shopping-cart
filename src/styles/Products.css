@@ -1,7 +1,8 @@
 .productContainer {
     display: grid;
     justify-items: center;
-    gap: 1rem
+    gap: 1rem;
+    padding-bottom: 3rem;
 
 }
 
