@@ -1,5 +1,29 @@
 .headerContainer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+    margin-bottom: 20px;
+    min-height: 10vh;
+}
+
+nav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+.logoContainer {
+    min-height: 10vh;
+
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}
+

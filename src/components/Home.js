@@ -19,7 +19,7 @@ const Home = () => {
             </Link>
 
             <div className="homeImageContainer">
-                <img alt="Terrazzo Flooring" src="images/AFDHome.jpg"></img>
+                <img className="homeImage" alt="Terrazzo Flooring" src="images/AFDHome.jpg"></img>
             </div>
 
             <Footer />

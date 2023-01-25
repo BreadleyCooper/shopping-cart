@@ -10,15 +10,17 @@ const Header = () => {
             <div className="logoContainer">
                 <img src="images/afd-logo.png" alt="AFD Logo"></img>
             </div>
-            <Link to="/home">
-                <div>Home</div>
-            </Link>
-            <Link to="/products">
-                <div>Products</div>
-            </Link>
-            <div className="cartBtnContainer">
-                <ShoppingCartIcon />
-            </div>
+            <nav>
+                <Link className="navLink" to="/home">
+                    <div>Home</div>
+                </Link>
+                <Link className="navLink" to="/products">
+                    <div>Products</div>
+                </Link>
+                <div className="cartBtnContainer">
+                    <ShoppingCartIcon />
+                </div>
+            </nav>
         </div>
     )
 }
