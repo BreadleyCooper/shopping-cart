@@ -5,6 +5,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import "../styles/Products.css"
 import "../styles/ProductCard.css"
+import { useState } from "react"
 
 const Products = (props) => {
 
@@ -14,9 +15,16 @@ const Products = (props) => {
     //     console.log(cartCount)
     // }
 
+
+    const [cartCount, setCartCount] = useState(0)
+
+    const incrementCartCount =()=> {
+        setCartCount(cartCount + 1)
+    }
+
     return (
         <div className="productsComponent">
-            <Header />
+            <Header cartCount = {cartCount}/>
             <div className="productContainer">
                 
                 {productArray.map((product) => {
@@ -27,6 +35,7 @@ const Products = (props) => {
                             key={product.id}
                             id = {product.id}
                             price ={product.price}
+                            incrementCartCount = {incrementCartCount}
                             />)
                     
                 })}

@@ -4,7 +4,7 @@ import "../styles/ProductCard.css"
 
 const ProductCard = (props) => {
 
-    const {image, name, id, price, handleCartClick} = props
+    const {image, name, id, price, incrementCartCount} = props
 
 
     return (
@@ -18,7 +18,7 @@ const ProductCard = (props) => {
             <p id="productName">{name}</p>
             <div className="priceAndBtnContainer">
                 <p>£{price}</p>
-                <button id="addToCartBtn" onClick={handleCartClick}>Add To Cart</button>
+                <button id="addToCartBtn" onClick={incrementCartCount}>Add To Cart</button>
             </div>
         </div>
     )

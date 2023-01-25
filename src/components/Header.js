@@ -4,13 +4,9 @@ import { Link } from "react-router-dom"
 import "../styles/Header.css"
 import { useState } from "react";
 
-const Header = () => {
+const Header = (props) => {
 
-    const [cartCount, setCartCount] = useState(0)
-
-    const incrementCartCount =()=> {
-        setCartCount(cartCount + 1)
-    }
+    const {cartCount} = props
     
     return (
         <div className="headerContainer">
