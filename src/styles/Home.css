@@ -36,10 +36,13 @@
 
 .shopNowBtn {
     width: fit-content;
-    padding: 1rem;
+    padding: 1rem 3rem;
     align-items: center;
     display: flex;
     justify-content: center;
     background-color: rgb(250,212,160);
     font-size: 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
 }

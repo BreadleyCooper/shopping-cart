@@ -5,6 +5,11 @@
 #addToCartBtn {
     background-color:  rgb(243,147,18);
     min-width: 180px;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 0 0.8rem;
+    font-weight: 600;
+    font-size: 1.3rem;
     
 }
 

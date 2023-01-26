@@ -2,7 +2,6 @@ import React from "react"
 import productArray from "../productArray"
 import ProductCard from "./ProductCard"
 import Header from "./Header"
-import Footer from "./Footer"
 import "../styles/Products.css"
 import "../styles/ProductCard.css"
 import { useState } from "react"
@@ -39,7 +38,6 @@ const Products = (props) => {
                             />)
                     
                 })}
-            <Footer />
             </div>
         </div>
         
