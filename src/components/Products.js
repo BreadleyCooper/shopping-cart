@@ -4,16 +4,11 @@ import ProductCard from "./ProductCard"
 import Header from "./Header"
 import "../styles/Products.css"
 import "../styles/ProductCard.css"
-import { useState } from "react"
 
 const Products = (props) => {
 
 
-    const [cartCount, setCartCount] = useState(0)
-
-    const incrementCartCount =()=> {
-        setCartCount(cartCount + 1)
-    }
+    const {cartCount, incrementCartCount} = props
 
     return (
         <div className="productsComponent">

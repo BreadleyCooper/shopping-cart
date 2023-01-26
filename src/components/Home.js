@@ -6,9 +6,11 @@ import "../styles/Home.css"
 
 const Home = (props) => {
 
+    const {cartCount} = props
+
     return (
         <div className="homeContainer">
-            <Header />
+            <Header cartCount={cartCount}/>
 
                 <div className="homeImageContainer">
                     <img className="homeImage" alt="Terrazzo Flooring" src="images/AFDHome.jpg"></img>
