@@ -17,7 +17,8 @@ const Products = (props) => {
                 
                 {productArray.map((product) => {
                     return(
-                        <ProductCard   
+                        <ProductCard  
+                            product={product} 
                             name={product.name}
                             image={product.image}
                             key={product.id}
