@@ -8,12 +8,6 @@ import { useState } from "react"
 
 const Products = (props) => {
 
-    // const handleCartClick = (event) => {
-    //     console.log("HandleCartClick")
-    //     setCartCount(cartCount + 1)
-    //     console.log(cartCount)
-    // }
-
 
     const [cartCount, setCartCount] = useState(0)
 
