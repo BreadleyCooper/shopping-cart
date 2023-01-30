@@ -1,11 +1,17 @@
 import React from "react"
+import { Link } from "react-router-dom"
+import Header from "./Header"
+import "../styles/Cart.css"
+import "../styles/Header.css"
 
 const Cart = (props) => {
 
-    const {cartItems} = props
+    const {cartItems, cartCount} = props
 
     return (
-        <div className="cartContainer"> 
+        <div> 
+            <Header cartCount={cartCount} />
+            <div >
             <div className="cartHead"></div>
             <div className="cartItems">
                 {console.log(cartItems)}
@@ -22,10 +28,11 @@ const Cart = (props) => {
             <div className="total"></div>
 
             <div className="checkoutBtnContainer">
-                <button id="checkoutBtn"></button>
+                <button id="checkoutBtn">Checkout</button>
             </div>
-            <div className="closeBtnContainer">
-                <button id="closeCartBtn"></button>
+            <Link className="closeBtnContainer" to="/products">
+                <button id="closeCartBtn">Close</button>
+            </Link>
             </div>
         </div>
     )
