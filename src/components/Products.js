@@ -8,7 +8,7 @@ import "../styles/ProductCard.css"
 const Products = (props) => {
 
 
-    const {cartCount, incrementCartCount} = props
+    const {cartCount, incrementCartCount, addToCart, cartItems} = props
 
     return (
         <div className="productsComponent">
@@ -25,6 +25,8 @@ const Products = (props) => {
                             id = {product.id}
                             price ={product.price}
                             incrementCartCount = {incrementCartCount}
+                            addToCart = {addToCart}
+                            cartItems={cartItems}
                             />)
                     
                 })}

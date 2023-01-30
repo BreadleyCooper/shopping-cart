@@ -4,12 +4,13 @@ import "../styles/ProductCard.css"
 
 const ProductCard = (props) => {
 
-    const {image, name, id, price, incrementCartCount, product} = props
+    const {image, name, id, price, incrementCartCount, product, addToCart, cartItems} = props
 
     const addToCartClick = (event) => {
         incrementCartCount()
-        console.log(product)
+        addToCart(product)
     }
+
 
 
     return (

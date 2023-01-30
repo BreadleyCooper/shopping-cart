@@ -20,10 +20,12 @@ const Header = (props) => {
                 <Link className="navLink" to="/products">
                     <div>Products</div>
                 </Link>
-                <div className="cartBtnContainer">
-                    <ShoppingCartIcon id="cartIcon"/>
-                    <p>{cartCount}</p>
-                </div>
+                <Link className="navLink" to="/cart">
+                    <div className="cartBtnContainer">
+                        <ShoppingCartIcon id="cartIcon"/>
+                        <p>{cartCount}</p>
+                    </div>
+                </Link>
             </nav>
         </div>
     )

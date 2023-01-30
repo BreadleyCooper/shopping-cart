@@ -16,4 +16,4 @@ function App() {
 
 export default App;
 
-// TODO: git  Set up cart component and routing link to cart button
+// TODO: map over cartItems to create cards inside the cart component for everything in the cart
