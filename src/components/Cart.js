@@ -9,7 +9,7 @@ const Cart = (props) => {
             <div className="cartHead"></div>
             <div className="cartItems">
                 {console.log(cartItems)}
-                {cartItems?.map((item) => {
+                {cartItems.map((item) => {
                     return(
                         <div className="cartItemContainer">
                             <img alt={item.name} src={item.image}></img>
