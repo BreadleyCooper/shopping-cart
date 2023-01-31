@@ -16,4 +16,4 @@ function App() {
 
 export default App;
 
-// TODO: map over cartItems to create cards inside the cart component for everything in the cart
+// TODO: Find a way to manage quantity. Can it be an extra value in the product object?
