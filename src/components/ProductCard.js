@@ -1,12 +1,14 @@
 import React from "react"
 import "../styles/ProductCard.css"
+import { uniqid }from "uniqid"
+
 
 
 const ProductCard = (props) => {
 
     const {image, name, id, price, incrementCartCount, product, addToCart, cartItems} = props
 
-    const addToCartClick = (event) => {
+    const addToCartClick = (id) => {
         incrementCartCount()
         addToCart(product)
     }
@@ -25,7 +27,7 @@ const ProductCard = (props) => {
             <p id="productName">{name}</p>
             <div className="priceAndBtnContainer">
                 <p>£{price}</p>
-                <button id="addToCartBtn" price={price} product={name} productID={id} onClick={addToCartClick}>Add To Cart</button>
+                <button id="addToCartBtn" price={price} product={name} productID={id} onClick={()=>addToCartClick(product.id)}>Add To Cart</button>
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ import Header from "./Header"
 import "../styles/Cart.css"
 import "../styles/Header.css"
 
+
 const Cart = (props) => {
 
     const {cartItems, cartCount} = props

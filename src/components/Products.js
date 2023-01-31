@@ -24,6 +24,7 @@ const Products = (props) => {
                             key={product.id}
                             id = {product.id}
                             price ={product.price}
+                            quantity={product.quantity}
                             incrementCartCount = {incrementCartCount}
                             addToCart = {addToCart}
                             cartItems={cartItems}

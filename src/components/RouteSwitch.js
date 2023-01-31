@@ -16,7 +16,8 @@ const RouteSwitch = () =>{
         id: 0,
         image: "images/productImages/Kingspan1.jpg",
         name: "Kingspan Acousticdec - 25mm Chipboard 600mm x 600mm Panel", 
-        price: "6.64"
+        price: "6.64",
+        quantity:1
     }])
 
     const incrementCartCount =()=> {
@@ -24,9 +25,14 @@ const RouteSwitch = () =>{
         setCartCount(cartCount + 1)
     }
 
-    const addToCart =(product)=> {
-        setCartItems(oldCart => [...oldCart, product])
-    }
+    // const addToCart =(product)=> {
+    //     const productID = cartItems.findIndex((i) => i.id === product.id)
+    //     if (product)
+    //     setCartItems(oldCart => [...oldCart, product])
+
+    // This repo has a good way of handling cart increment https://github.com/pklepa/shopping-cart/blob/6c11f0d0cf7475fb562c875ffa310497e94579e4/src/App.js#L27
+    // }
+
 
     return (
         <BrowserRouter>
