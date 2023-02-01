@@ -13,6 +13,13 @@ const Cart = (props) => {
         <div> 
             <Header cartCount={cartCount} />
             <div className="cartContainer">
+                <div className="checkoutBtnContainer">
+                    <button className="checkoutBtn">Checkout</button>
+                
+                    <Link className="closeBtnContainer" to="/products">
+                        <button className="closeCartBtn">Close</button>
+                    </Link>
+                </div>
             <div className="cartItems">
                 {console.log(cartItems)}
                 {cartItems.map((item) => {
@@ -34,11 +41,12 @@ const Cart = (props) => {
             <div className="total"></div>
 
             <div className="checkoutBtnContainer">
-                <button id="checkoutBtn">Checkout</button>
+                <button className="checkoutBtn">Checkout</button>
+            
+                <Link className="closeBtnContainer" to="/products">
+                    <button className="closeCartBtn">Close</button>
+                </Link>
             </div>
-            <Link className="closeBtnContainer" to="/products">
-                <button id="closeCartBtn">Close</button>
-            </Link>
             </div>
         </div>
     )
