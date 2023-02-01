@@ -21,7 +21,7 @@ const Home = (props) => {
                     <button className="shopNowBtn">Shop Now</button>
                 </Link>
 
-            <Footer />
+            <Footer className="footer"/>
         </div>
     )
 }

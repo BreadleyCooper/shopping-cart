@@ -2,6 +2,7 @@ import React from "react"
 import productArray from "../productArray"
 import ProductCard from "./ProductCard"
 import Header from "./Header"
+import Footer from "./Footer"
 import "../styles/Products.css"
 import "../styles/ProductCard.css"
 
@@ -32,6 +33,7 @@ const Products = (props) => {
                     
                 })}
             </div>
+            <Footer />
         </div>
         
     )
