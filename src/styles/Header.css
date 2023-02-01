@@ -5,9 +5,11 @@
     justify-content: space-around;
     font-size: 30px;
     margin-bottom: 20px;
-    min-height: 20vh;
-    max-height: 20vh;
+    min-height: 25vh;
+    max-height: 25vh;
+    min-width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
 }
 
 .headerNav {

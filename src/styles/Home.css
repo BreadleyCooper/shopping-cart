@@ -1,6 +1,10 @@
 .homeContainer {
     min-height: 100vh;
     min-width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .homeImageContainer {
@@ -45,8 +49,4 @@
     border: none;
     border-radius: 50px;
     font-weight: 700;
-}
-
-.footer {
-    margin-top: auto;
 }
