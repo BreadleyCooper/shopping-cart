@@ -10,7 +10,6 @@ const ProductCard = (props) => {
 
     const addToCartClick = (id) => {
         incrementCartCount()
-        addToCart(product)
     }
 
 
