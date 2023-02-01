@@ -12,19 +12,15 @@ const Cart = (props) => {
     return (
         <div> 
             <Header cartCount={cartCount} />
-            <div className="cartContainer">
+            <div >
+            <div className="cartHead"></div>
             <div className="cartItems">
+                {console.log(cartItems)}
                 {cartItems.map((item) => {
                     return(
                         <div className="cartItemContainer">
                             <img alt={item.name} src={item.image}></img>
                             <p>{item.name}</p>
-                            <div className="quantityContainer">
-                                <button>+</button>
-                                <label hidden for="quantity">Quantity, max 100</label>
-                                <input type="number" id="quantity" min="1" max="100" defaultValue={item.quantity}></input>
-                                <button>-</button>
-                            </div>
                         </div>
                     )
                 })}

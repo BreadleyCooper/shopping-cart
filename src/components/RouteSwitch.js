@@ -25,13 +25,14 @@ const RouteSwitch = () =>{
         setCartCount(cartCount + 1)
     }
 
-    // const addToCart =(product)=> {
-    //     const productID = cartItems.findIndex((i) => i.id === product.id)
-    //     if (product)
-    //     setCartItems(oldCart => [...oldCart, product])
+    const addToCart =(product)=> {
+        incrementCartCount()
+        setCartItems(oldCart => [...oldCart, product])
+        console.log(cartItems)
+    }
 
     // This repo has a good way of handling cart increment https://github.com/pklepa/shopping-cart/blob/6c11f0d0cf7475fb562c875ffa310497e94579e4/src/App.js#L27
-    // }
+ 
 
 
     return (
@@ -39,7 +40,7 @@ const RouteSwitch = () =>{
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/home" element={<Home cartCount={cartCount}/>} /> 
-                <Route path="/products" element={<Products cartCount={cartCount} incrementCartCount={incrementCartCount} cartItems={cartItems} />} />
+                <Route path="/products" element={<Products cartCount={cartCount} incrementCartCount={incrementCartCount} cartItems={cartItems} addToCart={addToCart} />} />
                 <Route path="/cart" element={<Cart cartItems={cartItems} cartCount={cartCount}/>}  />
             </Routes>
         </BrowserRouter>

@@ -2,7 +2,7 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -15,6 +15,7 @@
 
 .cartItems {
     max-width: 75%;
+
 }
 
 .cartItemContainer img {
@@ -24,4 +25,3 @@
 .cartItemContainer p {
     text-align: center;
 }
-
