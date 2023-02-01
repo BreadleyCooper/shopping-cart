@@ -10,16 +10,10 @@ const Cart = (props) => {
     const {cartItems, cartCount} = props
 
     return (
-        <div> 
+        <div className="cart"> 
             <Header cartCount={cartCount} />
             <div className="cartContainer">
-                <div className="checkoutBtnContainer">
-                    <button className="checkoutBtn">Checkout</button>
                 
-                    <Link className="closeBtnContainer" to="/products">
-                        <button className="closeCartBtn">Close</button>
-                    </Link>
-                </div>
             <div className="cartItems">
                 {console.log(cartItems)}
                 {cartItems.map((item) => {
