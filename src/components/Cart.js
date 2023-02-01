@@ -12,8 +12,7 @@ const Cart = (props) => {
     return (
         <div> 
             <Header cartCount={cartCount} />
-            <div >
-            <div className="cartHead"></div>
+            <div className="cartContainer">
             <div className="cartItems">
                 {console.log(cartItems)}
                 {cartItems.map((item) => {
@@ -21,6 +20,12 @@ const Cart = (props) => {
                         <div className="cartItemContainer">
                             <img alt={item.name} src={item.image}></img>
                             <p>{item.name}</p>
+                            <div className="quantityContainer">
+                                <button>+</button>
+                                <label hidden htmlFor="quantityInput">Input amount for quantity, max 100</label>
+                                <input type="number" id="quantityInput"></input>
+                                <button>-</button>
+                            </div>
                         </div>
                     )
                 })}
