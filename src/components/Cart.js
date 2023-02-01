@@ -22,10 +22,10 @@ const Cart = (props) => {
                             <img alt={item.name} src={item.image}></img>
                             <p>{item.name}</p>
                             <div className="quantityContainer">
-                                <button>+</button>
+                                <button id="incremenet" className="quantityAdjust">+</button>
                                 <label hidden htmlFor="quantityInput">Input amount for quantity, max 100</label>
                                 <input type="number" id="quantityInput"></input>
-                                <button>-</button>
+                                <button id="decrement" className="quantityAdjust">-</button>
                             </div>
                         </div>
                     )

@@ -68,7 +68,9 @@ body {
 }
 
 .cartItemContainer img {
-    max-width: 80%;
+    max-width: 60%;
+    aspect-ratio: 1;
+
 }
 
 .cartItemContainer p {
@@ -82,3 +84,17 @@ body {
 .quantityContainer input {
     max-width: 3rem
 }
+
+.quantityAdjust {
+    border-style: none;
+    background-color: rgb(214, 214, 214);
+    color:  rgb(243,147,18);
+    font-size: 25px;
+    width: 1.5em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
