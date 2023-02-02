@@ -46,7 +46,7 @@ const RouteSwitch = () =>{
 
     const decrementQuantity =(product) => {
         const itemIndex = cartItems.findIndex((i) => i.id === product.id)
-        if (product.quantity > 0 &&  (itemIndex > -1)) {
+        if (product.quantity >= 2 &&  (itemIndex > -1)) {
            
                 const newCart = cartItems.slice()
                 newCart[itemIndex].quantity--
@@ -57,15 +57,21 @@ const RouteSwitch = () =>{
         } else removeItem(product)
     }
 
-    const removeItem = (product) => {
-        console.log("removeItem")
-        const itemIndex = cartItems.findIndex((i) => i.id === product.id)
-        if (itemIndex > -1) {
-            const newCart = cartItems.splice(itemIndex, 1)
+    // const removeItem = (product) => {
+    //     console.log("removeItem")
+    //     const itemIndex = cartItems.findIndex((i) => i.id === product.id)
+    //     if (itemIndex > -1) {
+    //         const newCart = cartItems.splice(itemIndex, 1)
 
-            setCartItems(newCart)
-            setCartCount(cartCount - 1)
-    }}
+    //         setCartItems(newCart)
+    //         setCartCount(cartCount - 1)
+    // }}
+
+    const removeItem = (product) => {
+        const newCart = cartItems.filter(item => item.id !== product.id)
+        setCartItems(newCart)
+        setCartCount(cartCount - 1)
+    }
 
     return (
         <BrowserRouter>
