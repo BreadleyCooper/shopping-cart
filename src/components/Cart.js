@@ -24,7 +24,7 @@ const Cart = (props) => {
                             <div className="quantityContainer">
                                 <button id="incremenet" className="quantityAdjust">+</button>
                                 <label hidden htmlFor="quantityInput">Input amount for quantity, max 100</label>
-                                <input type="number" id="quantityInput"></input>
+                                <input type="number" id="quantityInput" defaultValue={item.quantity}></input>
                                 <button id="decrement" className="quantityAdjust">-</button>
                             </div>
                         </div>
