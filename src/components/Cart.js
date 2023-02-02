@@ -7,7 +7,7 @@ import "../styles/Header.css"
 
 const Cart = (props) => {
 
-    const {cartItems, cartCount} = props
+    const {cartItems, cartCount, product, incrementQuantity, decrementQuantity} = props
 
     return (
         <div className="cart"> 
@@ -22,10 +22,9 @@ const Cart = (props) => {
                             <img alt={item.name} src={item.image}></img>
                             <p>{item.name}</p>
                             <div className="quantityContainer">
-                                <button id="incremenet" className="quantityAdjust">+</button>
-                                <label hidden htmlFor="quantityInput">Input amount for quantity, max 100</label>
-                                <input type="number" id="quantityInput" defaultValue={item.quantity}></input>
-                                <button id="decrement" className="quantityAdjust">-</button>
+                                <button onClick={()=>incrementQuantity(item)} id="incremenet" className="quantityAdjust">+</button>
+                                <p>{item.quantity}</p>
+                                <button onClick={()=>decrementQuantity(item)} id="decrement" className="quantityAdjust">-</button>
                             </div>
                         </div>
                     )

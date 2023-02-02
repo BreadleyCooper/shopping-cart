@@ -12,13 +12,7 @@ import { useState } from "react";
 const RouteSwitch = () =>{ 
 
     const [cartCount, setCartCount] = useState(0)
-    const [cartItems, setCartItems] = useState([    {
-        id: 0,
-        image: "images/productImages/Kingspan1.jpg",
-        name: "Kingspan Acousticdec - 25mm Chipboard 600mm x 600mm Panel", 
-        price: "6.64",
-        quantity:1
-    }])
+    const [cartItems, setCartItems] = useState([])
 
 
 
@@ -39,6 +33,39 @@ const RouteSwitch = () =>{
         }
     }
 
+    const incrementQuantity =(product) => {
+        const itemIndex = cartItems.findIndex((i) => i.id === product.id)
+        if (itemIndex > -1) {
+            const newCart = cartItems.slice()
+            newCart[itemIndex].quantity++
+
+            setCartItems(newCart)
+            setCartCount(cartCount + 1)
+        }
+    }
+
+    const decrementQuantity =(product) => {
+        const itemIndex = cartItems.findIndex((i) => i.id === product.id)
+        if (product.quantity > 0 &&  (itemIndex > -1)) {
+           
+                const newCart = cartItems.slice()
+                newCart[itemIndex].quantity--
+
+                setCartItems(newCart)
+                setCartCount(cartCount - 1)
+            
+        } else removeItem(product)
+    }
+
+    const removeItem = (product) => {
+        console.log("removeItem")
+        const itemIndex = cartItems.findIndex((i) => i.id === product.id)
+        if (itemIndex > -1) {
+            const newCart = cartItems.splice(itemIndex, 1)
+
+            setCartItems(newCart)
+            setCartCount(cartCount - 1)
+    }}
 
     return (
         <BrowserRouter>
@@ -46,7 +73,7 @@ const RouteSwitch = () =>{
                 <Route path="/" element={<App />} />
                 <Route path="/home" element={<Home cartCount={cartCount}/>} /> 
                 <Route path="/products" element={<Products cartCount={cartCount} cartItems={cartItems} addToCart={addToCart} />} />
-                <Route path="/cart" element={<Cart cartItems={cartItems} cartCount={cartCount}/>}  />
+                <Route path="/cart" element={<Cart incrementQuantity={incrementQuantity} cartItems={cartItems} cartCount={cartCount} decrementQuantity={decrementQuantity}/>}  />
             </Routes>
         </BrowserRouter>
     )

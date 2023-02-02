@@ -10,7 +10,9 @@ let productArray = [
         id: 1,
         image: "images/productImages/Kingspan1.jpg",
         name: "Kingspan DLOCK - BSEN Heavy Duty 38mm 600mm x 600mm Panel", 
-        price: "15.55"
+        price: "15.55",
+        quantity: 0
+
     },
     {
         id: 2,
