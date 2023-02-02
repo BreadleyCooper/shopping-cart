@@ -20,19 +20,24 @@ const RouteSwitch = () =>{
         quantity:1
     }])
 
-    const incrementCartCount =()=> {
-      console.log("incrementCart")
-        setCartCount(cartCount + 1)
-    }
 
-    const addToCart =(product)=> {
-        incrementCartCount()
-        setCartItems(oldCart => [...oldCart, product])
-        console.log(cartItems)
-    }
 
-    // This repo has a good way of handling cart increment https://github.com/pklepa/shopping-cart/blob/6c11f0d0cf7475fb562c875ffa310497e94579e4/src/App.js#L27
- 
+    // use findIndex to check if the product is already in the cart (return is >1) if so, slice the cart items (create a copy), then on the item that matches the id of the product that is being added to cart, and already exists in cart. Increment the total.
+    // Otherwise, create a new copy of the cart and add on the product using spread syntax
+
+    const addToCart = (product) => {
+        const itemIndex = cartItems.findIndex((i) => i.id === product.id)
+        if (itemIndex > -1) {
+            const newCart = cartItems.slice()
+            newCart[itemIndex].quantity++
+
+            setCartItems(newCart)
+            setCartCount(cartCount + 1)
+        } else {
+            setCartItems(oldCart => [...oldCart, product]);
+            setCartCount(cartCount + 1)
+        }
+    }
 
 
     return (
@@ -40,7 +45,7 @@ const RouteSwitch = () =>{
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/home" element={<Home cartCount={cartCount}/>} /> 
-                <Route path="/products" element={<Products cartCount={cartCount} incrementCartCount={incrementCartCount} cartItems={cartItems} addToCart={addToCart} />} />
+                <Route path="/products" element={<Products cartCount={cartCount} cartItems={cartItems} addToCart={addToCart} />} />
                 <Route path="/cart" element={<Cart cartItems={cartItems} cartCount={cartCount}/>}  />
             </Routes>
         </BrowserRouter>
