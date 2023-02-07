@@ -15,7 +15,6 @@ const Cart = (props) => {
             <div className="cartContainer">
                 
             <div className="cartItems">
-                {console.log(cartItems)}
                 {cartItems.map((item) => {
                     return(
                         <div key={item.id} className="cartItemContainer">
