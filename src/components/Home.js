@@ -15,11 +15,12 @@ const Home = (props) => {
                 <div className="homeImageContainer">
                     <img className="homeImage" alt="Terrazzo Flooring" src="images/AFDHome.jpg"></img>
                     <div className="tagline">Elevate your space</div>
+                    <Link className="shopNow" to="/products">
+                    <button className="shopNowBtn">Shop Now</button>
+                    </Link>
                 </div>
 
-                <Link className="shopNow" to="/products">
-                    <button className="shopNowBtn">Shop Now</button>
-                </Link>
+                
 
             <Footer className="footer"/>
         </div>

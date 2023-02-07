@@ -8,7 +8,10 @@
 }
 
 .homeImageContainer {
+    display: grid;
+    grid-template-rows: auto repeat(2, 1fr);
     max-width: 100%;
+    min-height: 100%;
     position: relative;
     text-align: center;
 }
@@ -16,17 +19,17 @@
 .homeImage {
     max-width: 100%;
     opacity: 0.3;
+    grid-area: 1 / 1 / -1 / -1 ;
 }
 
 .tagline {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    grid-row-start: 3;
+    grid-column-start: 1;
     min-width: 80%;
-
     font-weight: 600;
     font-size: 2.5rem;
+    justify-self: center;
+    align-self: center;
 }
 
 .shopNow {
@@ -49,4 +52,20 @@
     border: none;
     border-radius: 50px;
     font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+   .homeImageContainer {
+        min-width: 100%;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+   }
+   .tagline {
+        grid-column-start: 2;
+        grid-row-start: 2;
+   }
+   .shopNow {
+        grid-row-start: 3;
+        grid-column-start: 2;
+   }
 }
