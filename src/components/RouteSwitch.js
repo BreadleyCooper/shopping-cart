@@ -13,6 +13,7 @@ const RouteSwitch = () =>{
 
     const [cartCount, setCartCount] = useState(0)
     const [cartItems, setCartItems] = useState([])
+    const [total, setTotal] = useState(0)
 
 
 
@@ -64,13 +65,18 @@ const RouteSwitch = () =>{
         setCartCount(cartCount - 1)
     }
 
+    const updateTotal =(cartItems) => {
+        const sum = cartItems.reduce((prev, curr) => prev + parseFloat(curr.price).toFixed(2) * curr.quantity,0)
+        return sum.toFixed(2)
+    }
+
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/home" element={<Home cartCount={cartCount}/>} /> 
                 <Route path="/products" element={<Products cartCount={cartCount} cartItems={cartItems} addToCart={addToCart} />} />
-                <Route path="/cart" element={<Cart incrementQuantity={incrementQuantity} cartItems={cartItems} cartCount={cartCount} decrementQuantity={decrementQuantity}/>}  />
+                <Route path="/cart" element={<Cart updateTotal={updateTotal} incrementQuantity={incrementQuantity} cartItems={cartItems} cartCount={cartCount} decrementQuantity={decrementQuantity}/>}  />
             </Routes>
         </BrowserRouter>
     )

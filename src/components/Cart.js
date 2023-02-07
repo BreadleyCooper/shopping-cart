@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import Header from "./Header"
 import "../styles/Cart.css"
@@ -7,7 +7,7 @@ import "../styles/Header.css"
 
 const Cart = (props) => {
 
-    const {cartItems, cartCount, product, incrementQuantity, decrementQuantity} = props
+    const {cartItems, cartCount, updateTotal, incrementQuantity, decrementQuantity} = props
 
     return (
         <div className="cart"> 
@@ -20,6 +20,7 @@ const Cart = (props) => {
                         <div key={item.id} className="cartItemContainer">
                             <img alt={item.name} src={item.image}></img>
                             <p>{item.name}</p>
+                            <p>{`£${item.price} each`}</p>
                             <div className="quantityContainer">
                                 <button onClick={()=>incrementQuantity(item)} id="incremenet" className="quantityAdjust">+</button>
                                 <p>{item.quantity}</p>
@@ -30,7 +31,9 @@ const Cart = (props) => {
                 })}
             </div>
 
-            <div className="total"></div>
+            <div className="total">
+                {`Total £${updateTotal(cartItems)}`}
+            </div>
 
             <div className="checkoutBtnContainer">
                 <button className="checkoutBtn">Checkout</button>
