@@ -57,16 +57,7 @@ const RouteSwitch = () =>{
         } else removeItem(product)
     }
 
-    // const removeItem = (product) => {
-    //     console.log("removeItem")
-    //     const itemIndex = cartItems.findIndex((i) => i.id === product.id)
-    //     if (itemIndex > -1) {
-    //         const newCart = cartItems.splice(itemIndex, 1)
-
-    //         setCartItems(newCart)
-    //         setCartCount(cartCount - 1)
-    // }}
-
+    // Use .filter to create a new cart without the item
     const removeItem = (product) => {
         const newCart = cartItems.filter(item => item.id !== product.id)
         setCartItems(newCart)

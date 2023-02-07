@@ -18,7 +18,7 @@ const Cart = (props) => {
                 {console.log(cartItems)}
                 {cartItems.map((item) => {
                     return(
-                        <div className="cartItemContainer">
+                        <div key={item.id} className="cartItemContainer">
                             <img alt={item.name} src={item.image}></img>
                             <p>{item.name}</p>
                             <div className="quantityContainer">

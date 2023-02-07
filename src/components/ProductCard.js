@@ -26,7 +26,7 @@ const ProductCard = (props) => {
             <p id="productName">{name}</p>
             <div className="priceAndBtnContainer">
                 <p>£{price}</p>
-                <button id="addToCartBtn" quantity={quantity}price={price} product={name} productID={id} onClick={()=>addToCartClick(product, id)}>Add To Cart</button>
+                <button id="addToCartBtn" quantity={quantity}price={price} product={name} productid={id} onClick={()=>addToCartClick(product, id)}>Add To Cart</button>
             </div>
         </div>
     )
