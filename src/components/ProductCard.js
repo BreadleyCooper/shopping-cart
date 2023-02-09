@@ -1,12 +1,11 @@
 import React from "react"
 import "../styles/ProductCard.css"
-import { uniqid }from "uniqid"
 
 
 
 const ProductCard = (props) => {
 
-    const {image, name, id, price, product, quantity, addToCart, cartItems} = props
+    const {image, name, id, price, product, quantity, addToCart} = props
 
     const addToCartClick = (product) => {
         addToCart(product, id)

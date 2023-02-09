@@ -10,6 +10,10 @@
     min-width: 100%;
     padding: 1rem;
     box-sizing: border-box;
+
+    -webkit-box-shadow: 0px 5px 21px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 21px -21px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 21px -21px rgba(0,0,0,0.75);
 }
 
 .headerNav {
@@ -53,11 +57,23 @@
     :root {
         font-size: 28px;
     }
+    .headerContainer {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content:stretch;
+        min-height: 10vh;
+    }
     .headerNav {
         justify-content: space-around;
         font-size: 50px;
+        width: 100%;
     }
     .logoContainer img {
         height: 3rem
+    }
+    .logoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

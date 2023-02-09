@@ -20,5 +20,8 @@
     .productCardContainer{
         font-size:1rem
     }
+    .productCardContainer img {
+        height: 15rem
+    }
 }
 

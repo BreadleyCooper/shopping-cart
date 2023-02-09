@@ -1,4 +1,3 @@
-import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import Header from "./Header"
 import "../styles/Cart.css"
@@ -22,9 +21,9 @@ const Cart = (props) => {
                             <p>{item.name}</p>
                             <p>{`£${item.price} each`}</p>
                             <div className="quantityContainer">
-                                <button onClick={()=>incrementQuantity(item)} id="incremenet" className="quantityAdjust">+</button>
-                                <p>{item.quantity}</p>
                                 <button onClick={()=>decrementQuantity(item)} id="decrement" className="quantityAdjust">-</button>
+                                <p>{`Quantity: ${item.quantity}`}</p>
+                                <button onClick={()=>incrementQuantity(item)} id="incremenet" className="quantityAdjust">+</button>
                             </div>
                         </div>
                     )
