@@ -130,4 +130,8 @@ body {
         justify-self: end;
         font-size: 1rem;
     }
+    .quantityAdjust {
+        font-size: 60px;
+        height: fit-content;
+    }
 }
